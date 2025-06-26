@@ -1,0 +1,227 @@
+<section
+  #heroSection
+  class="relative md:pt-40 md:pb-28 py-20 overflow-hidden z-1 bg-darkmode"
+  id="main-banner"
+>
+  <!-- Floating Background Elements -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <!-- Animated Crypto Symbols -->
+    <div
+      class="absolute top-20 left-10 text-primary text-2xl animate-float-slow opacity-20"
+    >
+      ₿
+    </div>
+    <div
+      class="absolute top-40 right-20 text-yellow-500 text-xl animate-float-medium opacity-30 delay-300"
+    >
+      Ξ
+    </div>
+    <div
+      class="absolute bottom-40 left-20 text-blue-500 text-lg animate-float-fast opacity-25 delay-500"
+    >
+      💎
+    </div>
+    <div
+      class="absolute bottom-20 right-40 text-green-500 text-2xl animate-float-slow opacity-20 delay-700"
+    >
+      🚀
+    </div>
+
+    <!-- Geometric Shapes -->
+    <div
+      class="absolute top-32 right-10 w-16 h-16 bg-gradient-to-br from-primary to-teal-400 rounded-full opacity-20 animate-pulse-slow"
+    ></div>
+    <div
+      class="absolute bottom-32 left-16 w-12 h-12 bg-gradient-to-tr from-yellow-500 to-orange-500 rounded-lg opacity-15 animate-float-medium delay-400"
+    ></div>
+    <div
+      class="absolute top-1/2 left-1/4 w-8 h-8 bg-gradient-to-bl from-purple-500 to-pink-500 rounded-full opacity-25 animate-float-fast delay-600"
+    ></div>
+  </div>
+
+  <div class="container mx-auto lg:max-w-screen-xl">
+    <div class="grid lg:grid-cols-2 gap-12 items-center px-4">
+      <!-- Left Content -->
+      <div class="left-content animate-fadeInLeft">
+        <div
+          class="flex gap-6 items-center lg:justify-start justify-center mb-5 mt-12"
+        >
+          <div
+            class="w-12 h-12 bg-gradient-to-r from-primary to-teal-400 rounded-full flex items-center justify-center animate-pulse-slow"
+          >
+            <span class="text-white text-xl">💼</span>
+          </div>
+          <p class="text-white sm:text-28 text-18 mb-0">
+            Crypto On The <span class="text-primary">Go</span>
+          </p>
+        </div>
+
+        <h1
+          class="font-medium lg:text-76 md:text-70 text-54 lg:text-start text-center text-white mb-10 animate-fadeInUp delay-200"
+        >
+          Buy and Sell <span class="text-primary animate-pulse">Crypto</span> of
+          your <span class="text-primary">choice</span>!
+        </h1>
+
+        <div
+          class="flex items-center md:justify-start justify-center gap-8 animate-fadeInUp delay-400"
+        >
+          <button
+            (click)="openBuyModal()"
+            class="bg-gradient-to-r from-primary to-teal-400 border border-primary rounded-lg text-21 font-medium hover:scale-105 hover:shadow-lg hover:shadow-primary/25 text-white py-3 px-8 transition-all duration-300"
+          >
+            Buy Crypto
+          </button>
+          <button
+            (click)="openSellModal()"
+            class="bg-transparent border-2 border-primary rounded-lg text-21 font-medium hover:bg-primary hover:text-darkmode hover:scale-105 text-primary py-3 px-8 transition-all duration-300"
+          >
+            Sell Crypto
+          </button>
+        </div>
+
+        <div
+          class="flex items-center md:justify-start justify-center gap-6 mt-20 animate-fadeInUp delay-600"
+        >
+          <div
+            (click)="downloadAndroidApp()"
+            class="bg-dark_grey border border-dark_border rounded-lg px-6 py-4 hover:border-primary hover:scale-105 transition-all duration-300 cursor-pointer group"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-16 h-16 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform"
+              >
+                <img
+                  src="assets/images/hero/playstore.png"
+                  alt="Google Play"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div>
+                <p class="text-xs text-gray-400">ANDROID APP ON</p>
+                <p
+                  class="text-white font-medium group-hover:text-primary transition-colors"
+                >
+                  Google Play
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            (click)="downloadIOSApp()"
+            class="bg-dark_grey border border-dark_border rounded-lg px-6 py-4 hover:border-primary hover:scale-105 transition-all duration-300 cursor-pointer group"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="w-16 h-16 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform"
+              >
+                <img
+                  src="assets/images/hero/applestore.png"
+                  alt="App Store"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <div>
+                <p class="text-xs text-gray-400">Download in de</p>
+                <p
+                  class="text-white font-medium group-hover:text-primary transition-colors"
+                >
+                  App Store
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Image / Animated Elements -->
+      <div class="relative animate-fadeInRight delay-200">
+        <img
+          src="assets/images/hero/2.png"
+          alt="Hero Image"
+          class="w-3/4 h-140 rounded-sm shadow-sm animate-float-slow"
+        />
+
+        <!-- Small floating elements -->
+        <div
+          class="absolute top-10 -left-5 w-24 h-24 bg-blue-400 opacity-20 rounded-full mix-blend-screen blur-md animate-pulse-slow"
+        ></div>
+        <div
+          class="absolute bottom-20 -right-5 w-20 h-20 bg-green-400 opacity-20 rounded-lg mix-blend-screen blur-md animate-float-fast"
+        ></div>
+
+        <!-- Floating Crypto Icons -->
+        <div
+          class="absolute top-10 left-10 text-primary text-3xl animate-float-slow opacity-80"
+        >
+          ₿
+        </div>
+        <div
+          class="absolute bottom-20 right-10 text-yellow-500 text-2xl animate-float-medium opacity-70 delay-300"
+        >
+          Ξ
+        </div>
+        <div
+          class="absolute top-1/4 right-20 text-blue-500 text-xl animate-float-fast opacity-60 delay-500"
+        >
+          💎
+        </div>
+        <div
+          class="absolute bottom-1/4 left-10 text-green-500 text-3xl animate-float-slow opacity-75 delay-700"
+        >
+          🚀
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enhanced Background Effects -->
+  <div
+    class="absolute w-96 h-96 bg-gradient-to-bl from-primary to-teal-500 blur-3xl rounded-full -top-48 -right-48 opacity-20 animate-pulse-slow"
+  ></div>
+  <div
+    class="absolute w-80 h-80 bg-gradient-to-tr from-purple-600 to-pink-600 blur-3xl rounded-full -bottom-40 -left-40 opacity-15 animate-pulse-slow delay-1000"
+  ></div>
+
+  <!-- Buy Modal -->
+  <div
+    *ngIf="isBuyModalOpen"
+    class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 flex items-center justify-center z-50 animate-fadeIn modal-backdrop"
+    (click)="closeBuyModal()"
+  >
+    <div
+      class="relative w-full max-w-md overflow-hidden rounded-lg px-8 pt-14 pb-8 z-999 text-center bg-dark_grey bg-opacity-95 backdrop-blur-md animate-slideUp border border-dark_border modal-content"
+      (click)="$event.stopPropagation()"
+    >
+      <button
+        (click)="closeBuyModal()"
+        class="absolute top-0 right-0 mr-8 mt-8 text-white hover:text-primary text-2xl transition-colors"
+        aria-label="Close Buy Modal"
+      >
+        ×
+      </button>
+      <app-buy-crypto></app-buy-crypto>
+    </div>
+  </div>
+
+  <!-- Sell Modal -->
+  <div
+    *ngIf="isSellModalOpen"
+    class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 flex items-center justify-center z-50 animate-fadeIn modal-backdrop"
+    (click)="closeSellModal()"
+  >
+    <div
+      class="relative w-full max-w-md overflow-hidden rounded-lg px-8 pt-14 pb-8 z-999 text-center bg-dark_grey bg-opacity-95 backdrop-blur-md animate-slideUp border border-dark_border modal-content"
+      (click)="$event.stopPropagation()"
+    >
+      <button
+        (click)="closeSellModal()"
+        class="absolute top-0 right-0 mr-8 mt-8 text-white hover:text-primary text-2xl transition-colors"
+        aria-label="Close Sell Modal"
+      >
+        ×
+      </button>
+      <app-sell-crypto></app-sell-crypto>
+    </div>
+  </div>
+</section>

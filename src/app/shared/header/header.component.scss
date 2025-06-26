@@ -1,0 +1,91 @@
+/* Header Component Styles */
+
+header {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(11, 14, 17, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-color: transparent; /* Remove bottom border when scrolled */
+}
+
+/* Desktop Navigation - Always visible on large screens */
+.desktop-nav {
+  display: flex;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+/* Desktop Auth Buttons - Always visible on large screens */
+.desktop-auth {
+  display: flex;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+/* Mobile Menu Button - Only visible on small screens */
+.mobile-menu-btn {
+  display: none;
+
+  @media (max-width: 1023px) {
+    display: block;
+  }
+}
+
+/* Mobile Menu - Hidden by default, show when toggled */
+.mobile-menu {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+
+  @media (min-width: 1024px) {
+    display: none !important;
+  }
+}
+
+/* Navigation Link Styles */
+.nav-link {
+  position: relative;
+
+  &:hover {
+    color: var(--primary);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+/* Responsive breakpoints */
+@media (min-width: 1024px) {
+  .desktop-nav {
+    display: flex !important;
+  }
+
+  .desktop-auth {
+    display: flex !important;
+  }
+
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}

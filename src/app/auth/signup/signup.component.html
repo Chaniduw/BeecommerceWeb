@@ -1,0 +1,123 @@
+<div class="max-w-md mx-auto p-4">
+  <div class="flex justify-center mb-16">
+    <app-logo></app-logo>
+  </div>
+
+  <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <div class="mb-4">
+      <input
+        type="text"
+        formControlName="name"
+        placeholder="Full Name"
+        class="text-white bg-transparent border border-dark_border border-opacity-60 rounded-md px-3 py-2 w-full focus:border-primary focus-visible:outline-0"
+        required
+      />
+      <div
+        *ngIf="
+          signUpForm.get('name')?.touched && signUpForm.get('name')?.invalid
+        "
+        class="text-red-500 text-sm mt-1"
+      >
+        Name is required
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="Email"
+        class="text-white bg-transparent border border-dark_border border-opacity-60 rounded-md px-3 py-2 w-full focus:border-primary focus-visible:outline-0"
+        required
+      />
+      <div
+        *ngIf="
+          signUpForm.get('email')?.touched && signUpForm.get('email')?.invalid
+        "
+        class="text-red-500 text-sm mt-1"
+      >
+        Please enter a valid email
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <input
+        type="password"
+        formControlName="password"
+        placeholder="Password"
+        class="text-white bg-transparent border border-dark_border border-opacity-60 rounded-md px-3 py-2 w-full focus:border-primary focus-visible:outline-0"
+        required
+      />
+      <div
+        *ngIf="
+          signUpForm.get('password')?.touched &&
+          signUpForm.get('password')?.invalid
+        "
+        class="text-red-500 text-sm mt-1"
+      >
+        Password must be at least 6 characters
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <input
+        type="password"
+        formControlName="confirmPassword"
+        placeholder="Confirm Password"
+        class="text-white bg-transparent border border-dark_border border-opacity-60 rounded-md px-3 py-2 w-full focus:border-primary focus-visible:outline-0"
+        required
+      />
+      <div
+        *ngIf="
+          signUpForm.get('confirmPassword')?.touched &&
+          signUpForm.get('confirmPassword')?.invalid
+        "
+        class="text-red-500 text-sm mt-1"
+      >
+        Passwords don't match
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label class="flex items-center text-white">
+        <input
+          type="checkbox"
+          class="mr-2"
+          formControlName="agreeToTerms"
+          required
+        />
+        I agree to the
+        <a href="#" class="text-primary hover:underline"
+          >Terms and Conditions</a
+        >
+      </label>
+      <div
+        *ngIf="
+          signUpForm.get('agreeToTerms')?.touched &&
+          signUpForm.get('agreeToTerms')?.invalid
+        "
+        class="text-red-500 text-sm mt-1"
+      >
+        You must agree to the terms
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      [disabled]="loading || signUpForm.invalid"
+      class="text-darkmode font-medium text-18 bg-primary w-full border border-primary rounded-lg py-3 hover:text-primary hover:bg-transparent disabled:opacity-50"
+    >
+      <span *ngIf="!loading">Sign Up</span>
+      <span *ngIf="loading">Creating account...</span>
+    </button>
+  </form>
+
+  <div class="text-center mt-6">
+    <p class="text-white">
+      Already have an account?
+      <button (click)="switchToSignIn()" class="text-primary hover:underline">
+        Sign In
+      </button>
+    </p>
+  </div>
+</div>

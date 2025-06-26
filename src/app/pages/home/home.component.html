@@ -1,0 +1,564 @@
+<main class="bg-darkmode min-h-screen relative overflow-hidden">
+  <!-- Animated Background Elements -->
+  <div class="fixed inset-0 pointer-events-none">
+    <!-- Floating Geometric Shapes -->
+    <div
+      class="absolute top-20 left-10 w-20 h-20 bg-primary opacity-10 rounded-full animate-float-slow"
+    ></div>
+    <div
+      class="absolute top-40 right-20 w-16 h-16 bg-blue-500 opacity-15 rounded-lg rotate-45 animate-float-medium"
+    ></div>
+    <div
+      class="absolute bottom-40 left-1/4 w-12 h-12 bg-yellow-500 opacity-20 rounded-full animate-float-fast"
+    ></div>
+    <div
+      class="absolute top-1/3 right-1/4 w-8 h-8 bg-red-500 opacity-25 rounded-lg animate-float-slow"
+    ></div>
+    <div
+      class="absolute bottom-20 right-10 w-24 h-24 bg-purple-500 opacity-10 rounded-full animate-float-medium"
+    ></div>
+
+    <!-- Gradient Overlays -->
+    <div
+      class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-primary to-transparent opacity-5 blur-3xl animate-pulse-slow"
+    ></div>
+    <div
+      class="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-tl from-blue-500 to-transparent opacity-5 blur-3xl animate-pulse-slow delay-1000"
+    ></div>
+    <div
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-yellow-500 to-transparent opacity-3 blur-3xl animate-pulse-slow delay-2000"
+    ></div>
+  </div>
+
+  <!-- Main Content -->
+  <div #homePageContent class="relative z-10">
+    <app-hero></app-hero>
+
+    <!-- Crypto Prices Section -->
+    <section class="py-20 bg-darkmode relative animate-fadeInUp">
+      <!-- Section Background -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-transparent via-dark_grey via-opacity-20 to-transparent"
+      ></div>
+
+      <div class="container mx-auto lg:max-w-screen-xl relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16 px-4">
+          <h2 class="text-primary text-18 mb-4 animate-fadeInUp">
+            Live Crypto Prices
+          </h2>
+          <p
+            class="text-white lg:text-36 text-28 font-medium animate-fadeInUp delay-200"
+          >
+            Track your favorite
+            <span class="text-primary">cryptocurrencies</span>
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 px-4">
+          <!-- Bitcoin Card -->
+          <div
+            class="text-center transition-all duration-500 hover:transform hover:scale-105 group animate-fadeInUp delay-300"
+          >
+            <div class="flex items-center gap-3 mb-4 justify-center">
+              <div
+                class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 p-2"
+              >
+                <span class="text-white font-bold">₿</span>
+              </div>
+              <div>
+                <h4 class="text-white font-medium">Bitcoin</h4>
+                <p class="text-gray-400 text-sm">BTC/USD</p>
+              </div>
+            </div>
+            <div class="text-white text-2xl font-bold mb-2">$93,291.24</div>
+            <div class="text-red-500 text-sm flex items-center">
+              <span class="animate-pulse">📉</span>
+              <span class="ml-1">$944.04.99 (-0.98%)</span>
+            </div>
+          </div>
+
+          <!-- Ethereum Card -->
+          <div
+            class="text-center transition-all duration-500 hover:transform hover:scale-105 group animate-fadeInUp delay-400"
+          >
+            <div class="flex items-center gap-3 mb-4 justify-center">
+              <div
+                class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 p-2"
+              >
+                <span class="text-white font-bold">Ξ</span>
+              </div>
+              <div>
+                <h4 class="text-white font-medium">Ethereum</h4>
+                <p class="text-gray-400 text-sm">ETH/USD</p>
+              </div>
+            </div>
+            <div class="text-white text-2xl font-bold mb-2">$3,128.84</div>
+            <div class="text-red-500 text-sm flex items-center">
+              <span class="animate-pulse">📉</span>
+              <span class="ml-1">$4,878.39 (-35.9%)</span>
+            </div>
+          </div>
+
+          <!-- Bitcoin Cash Card -->
+          <div
+            class="text-center transition-all duration-500 hover:transform hover:scale-105 group animate-fadeInUp delay-500"
+          >
+            <div class="flex items-center gap-3 mb-4 justify-center">
+              <div
+                class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 p-2"
+              >
+                <span class="text-white font-bold">₿</span>
+              </div>
+              <div>
+                <h4 class="text-white font-medium">Bitcoin Cash</h4>
+                <p class="text-gray-400 text-sm">BTC/USD</p>
+              </div>
+            </div>
+            <div class="text-white text-2xl font-bold mb-2">$443.27</div>
+            <div class="text-red-500 text-sm flex items-center">
+              <span class="animate-pulse">📉</span>
+              <span class="ml-1">$3,789.82 (-88.3%)</span>
+            </div>
+          </div>
+
+          <!-- Litecoin Card -->
+          <div
+            class="text-center transition-all duration-500 hover:transform hover:scale-105 group animate-fadeInUp delay-600"
+          >
+            <div class="flex items-center gap-3 mb-4 justify-center">
+              <div
+                class="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 p-2"
+              >
+                <span class="text-white font-bold">Ł</span>
+              </div>
+              <div>
+                <h4 class="text-white font-medium">Litecoin</h4>
+                <p class="text-gray-400 text-sm">LTC/USD</p>
+              </div>
+            </div>
+            <div class="text-white text-2xl font-bold mb-2">$86.11</div>
+            <div class="text-red-500 text-sm flex items-center">
+              <span class="animate-pulse">📉</span>
+              <span class="ml-1">$190.28 (-70.7%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-20 bg-darkmode relative animate-fadeInUp">
+      <!-- Floating crypto icons background -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden">
+        <div
+          class="absolute top-10 left-1/4 text-6xl opacity-5 animate-float-slow"
+        >
+          ₿
+        </div>
+        <div
+          class="absolute bottom-20 right-1/4 text-5xl opacity-5 animate-float-medium"
+        >
+          Ξ
+        </div>
+        <div
+          class="absolute top-1/2 left-10 text-4xl opacity-5 animate-float-fast"
+        >
+          💎
+        </div>
+        <div
+          class="absolute bottom-1/3 right-10 text-5xl opacity-5 animate-float-slow"
+        >
+          🚀
+        </div>
+      </div>
+
+      <div class="container mx-auto lg:max-w-screen-xl relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center px-4">
+          <!-- Left Content -->
+          <div class="animate-fadeInLeft">
+            <p class="text-primary text-18 mb-4">Work with us</p>
+            <h2 class="text-white lg:text-54 text-36 font-medium mb-8">
+              Successfully launch your blockchain project.
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <!-- Blockchain Consulting -->
+              <div
+                class="text-center transition-all duration-500 hover:transform hover:scale-105 group animate-fadeInUp delay-200"
+              >
+                <div
+                  class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300 p-2"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <path
+                      d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-white text-24 font-medium mb-2">
+                  Blockchain Consulting
+                </h4>
+                <p class="text-gray-400 text-base leading-relaxed">
+                  Expert guidance through your blockchain journey, from concept
+                  to deployment.
+                </p>
+              </div>
+
+              <!-- Smart Contracts -->
+              <div
+                class="text-center transition-all duration-500 hover:transform hover:scale-105 group animate-fadeInUp delay-300"
+              >
+                <div
+                  class="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300 p-2"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <path
+                      d="M9 12l2 2 4-4"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-white text-24 font-medium mb-2">
+                  Smart Contracts
+                </h4>
+                <p class="text-gray-400 text-base leading-relaxed">
+                  Develop secure, efficient, and custom smart contracts for your
+                  decentralized applications.
+                </p>
+              </div>
+
+              <!-- DApp Development -->
+              <div
+                class="text-center transition-all duration-500 hover:transform hover:scale-105 group animate-fadeInUp delay-400"
+              >
+                <div
+                  class="w-16 h-16 bg-yellow-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300 p-2"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <path
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-white text-24 font-medium mb-2">
+                  DApp Development
+                </h4>
+                <p class="text-gray-400 text-base leading-relaxed">
+                  Building engaging and user-friendly decentralized applications
+                  (DApps) on various blockchain platforms.
+                </p>
+              </div>
+
+              <!-- Token Creation -->
+              <div
+                class="text-center transition-all duration-500 hover:transform hover:scale-105 group animate-fadeInUp delay-500"
+              >
+                <div
+                  class="w-16 h-16 bg-red-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:rotate-12 transition-transform duration-300 p-2"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="group-hover:scale-110 transition-transform duration-300"
+                  >
+                    <path
+                      d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-white text-24 font-medium mb-2">
+                  Token Creation
+                </h4>
+                <p class="text-gray-400 text-base leading-relaxed">
+                  Creating custom tokens (ERC-20, NFT) for your project with
+                  integrated smart contract functionalities.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Image / Animated Elements -->
+          <div class="relative animate-fadeInRight delay-200">
+            <img
+              src="assets/images/hero/banner-image.png"
+              alt="Blockchain development illustration"
+              class="w-full h-auto rounded-lg shadow-xl animate-float-medium"
+            />
+
+            <!-- Small floating elements -->
+            <div
+              class="absolute top-10 -left-5 w-24 h-24 bg-blue-400 opacity-20 rounded-full mix-blend-screen blur-md animate-pulse-slow"
+            ></div>
+            <div
+              class="absolute bottom-20 -right-5 w-20 h-20 bg-green-400 opacity-20 rounded-lg mix-blend-screen blur-md animate-float-fast"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section
+      id="development"
+      class="py-20 bg-darkmode relative animate-fadeInUp"
+    >
+      <div class="container mx-auto lg:max-w-screen-xl px-4">
+        <div class="text-center mb-16">
+          <p class="text-primary text-18 mb-4 animate-fadeInUp">
+            Development timeline
+          </p>
+          <h2
+            class="text-white lg:text-54 text-36 font-medium animate-fadeInUp delay-200"
+          >
+            We can enter at any point or help you all the way through the
+            development cycle.
+          </h2>
+        </div>
+
+        <!-- Timeline with Center Phone -->
+        <div class="relative animate-fadeInUp delay-300">
+          <div
+            class="flex justify-center items-center min-h-[600px] timeline-container"
+          >
+            <!-- Center Phone Mockup -->
+            <div class="relative z-10 mx-8 animate-float-slow">
+              <div
+                class="w-64 h-128 bg-dark_grey rounded-3xl border-4 border-gray-600 p-4 shadow-2xl hover:shadow-primary hover:shadow-opacity-20 transition-all duration-500"
+              >
+                <div class="bg-darkmode rounded-2xl h-full p-4">
+                  <!-- Phone Screen Content -->
+                  <div class="text-center text-white">
+                    <div class="mb-4">
+                      <div
+                        class="w-8 h-8 bg-primary rounded-full mx-auto mb-2 animate-pulse"
+                      ></div>
+                      <p class="text-sm">Exchange</p>
+                    </div>
+                    <div class="mb-4">
+                      <p class="text-xs text-gray-400">You Send</p>
+                      <p class="text-2xl font-bold animate-pulse">5.500,25</p>
+                      <p class="text-primary">📊 ETH</p>
+                    </div>
+                    <div class="mb-4">
+                      <p class="text-xs text-gray-400">You Receive</p>
+                      <p class="text-2xl font-bold animate-pulse">87.382.471</p>
+                      <p class="text-red-500">🔴 ETC</p>
+                    </div>
+                    <div class="text-left">
+                      <p class="text-xs text-gray-400 mb-2">
+                        Available Portfolio
+                      </p>
+                      <div class="space-y-2">
+                        <div class="flex justify-between">
+                          <span class="text-sm">💎 Ethereum</span>
+                          <span class="text-sm">25.468.00</span>
+                        </div>
+                        <div class="text-xs text-gray-500">
+                          1 ETH = 15.897 ETC
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Points - Better Positioned -->
+            <!-- Planning - Top Left -->
+            <div
+              class="absolute left-1/2 top-16 transform -translate-x-72 lg:-translate-x-80 xl:-translate-x-96 animate-fadeInLeft delay-500 timeline-item"
+            >
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 hover:scale-110 transition-transform duration-300 animate-pulse shadow-lg shadow-primary/30"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="text-white"
+                  >
+                    <path
+                      d="M9 12l2 2 4-4"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-white text-18 font-medium mb-2">Planning</h4>
+                <p class="text-gray-400 text-sm max-w-32 leading-relaxed">
+                  Map the project's scope and architecture
+                </p>
+              </div>
+            </div>
+
+            <!-- Refinement - Top Right -->
+            <div
+              class="absolute right-1/2 top-16 transform translate-x-72 lg:translate-x-80 xl:translate-x-96 animate-fadeInRight delay-600 timeline-item right"
+            >
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4 hover:scale-110 transition-transform duration-300 animate-pulse shadow-lg shadow-blue-500/30"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="text-white"
+                  >
+                    <path
+                      d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-white text-18 font-medium mb-2">Refinement</h4>
+                <p class="text-gray-400 text-sm max-w-32 leading-relaxed">
+                  Refine and improve your solution
+                </p>
+              </div>
+            </div>
+
+            <!-- Prototype - Bottom Left -->
+            <div
+              class="absolute left-1/2 bottom-16 transform -translate-x-72 lg:-translate-x-80 xl:-translate-x-96 animate-fadeInLeft delay-700 timeline-item"
+            >
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mb-4 hover:scale-110 transition-transform duration-300 animate-pulse shadow-lg shadow-yellow-500/30"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="text-white"
+                  >
+                    <path
+                      d="M12 2v20M2 12h20"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-white text-18 font-medium mb-2">Prototype</h4>
+                <p class="text-gray-400 text-sm max-w-32 leading-relaxed">
+                  Build a working model
+                </p>
+              </div>
+            </div>
+
+            <!-- Support - Bottom Right -->
+            <div
+              class="absolute right-1/2 bottom-16 transform translate-x-72 lg:translate-x-80 xl:translate-x-96 animate-fadeInRight delay-800 timeline-item right"
+            >
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-4 hover:scale-110 transition-transform duration-300 animate-pulse shadow-lg shadow-red-500/30"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    class="text-white"
+                  >
+                    <path
+                      d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+                <h4 class="text-white text-18 font-medium mb-2">Support</h4>
+                <p class="text-gray-400 text-sm max-w-32 leading-relaxed">
+                  Deploy the product
+                </p>
+              </div>
+            </div>
+
+            <!-- Connecting Lines -->
+            <div class="absolute inset-0 pointer-events-none timeline-lines">
+              <!-- Top horizontal line -->
+              <div
+                class="absolute top-24 left-1/2 w-32 lg:w-40 xl:w-48 h-0.5 bg-gradient-to-r from-primary to-blue-500 transform -translate-x-16 lg:-translate-x-20 xl:-translate-x-24 opacity-30 animate-pulse-slow"
+              ></div>
+              <!-- Bottom horizontal line -->
+              <div
+                class="absolute bottom-24 left-1/2 w-32 lg:w-40 xl:w-48 h-0.5 bg-gradient-to-r from-yellow-500 to-red-500 transform -translate-x-16 lg:-translate-x-20 xl:-translate-x-24 opacity-30 animate-pulse-slow delay-300"
+              ></div>
+              <!-- Left vertical line -->
+              <div
+                class="absolute top-1/2 left-1/2 w-0.5 h-32 lg:h-40 xl:h-48 bg-gradient-to-b from-primary to-yellow-500 transform -translate-x-72 lg:-translate-x-80 xl:-translate-x-96 -translate-y-16 lg:-translate-y-20 xl:-translate-y-24 opacity-30 animate-pulse-slow delay-500"
+              ></div>
+              <!-- Right vertical line -->
+              <div
+                class="absolute top-1/2 right-1/2 w-0.5 h-32 lg:h-40 xl:h-48 bg-gradient-to-b from-blue-500 to-red-500 transform translate-x-72 lg:translate-x-80 xl:translate-x-96 -translate-y-16 lg:-translate-y-20 xl:-translate-y-24 opacity-30 animate-pulse-slow delay-700"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <app-features class="animate-fadeInUp delay-200"></app-features>
+
+    <!-- Platform Section -->
+    <app-platform class="animate-fadeInUp delay-400"></app-platform>
+
+    <!-- Portfolio Section -->
+    <app-portfolio class="animate-fadeInUp delay-600"></app-portfolio>
+
+    <!-- Testimonials Section -->
+    <app-testimonials class="animate-fadeInUp delay-800"></app-testimonials>
+
+    <!-- Upgrade Section -->
+    <app-upgrade class="animate-fadeInUp delay-1000"></app-upgrade>
+
+    <!-- Perks Section -->
+    <app-perks class="animate-fadeInUp delay-1200"></app-perks>
+
+    <!-- Newsletter Section -->
+    <app-newsletter class="animate-fadeInUp delay-1500"></app-newsletter>
+  </div>
+</main>
